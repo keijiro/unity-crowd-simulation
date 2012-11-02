@@ -9,8 +9,8 @@ AnimatorController:
   m_AnimatorEvents:
   - m_Name: speed
     m_Type: 1
-    m_Min: -1
-    m_Max: 1
+    m_Min: 0
+    m_Max: 1.5
     m_DefaultVector: {x: 0, y: 0, z: 0}
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -26,6 +26,25 @@ AnimatorController:
     m_SyncedLayerIndex: -1
     m_StateMachineMotionSetIndex: 0
     m_IKPass: 0
+--- !u!206 &20600000
+BlendTree:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Blend Tree
+  m_Childs:
+  - m_Motion: {fileID: 7400002, guid: 109f98583d62842198f889796fe37b4d, type: 3}
+    m_Threshold: 0
+    m_TimeScale: 1
+    m_IsAnim: 1
+  - m_Motion: {fileID: 7400000, guid: e985bab5b6386468d84521d0b985cbfe, type: 3}
+    m_Threshold: 1.5
+    m_TimeScale: 1
+    m_IsAnim: 1
+  m_BlendEvent: speed
+  m_MinThreshold: 0
+  m_MaxThreshold: 1.5
+  m_UseAutomaticThresholds: 1
 --- !u!1101 &110100000
 Transition:
   m_ObjectHideFlags: 3
@@ -39,7 +58,7 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: speed
-    m_EventTreshold: 0
+    m_EventTreshold: .100000001
     m_ExitTime: .0136801936
   m_Atomic: 0
   m_Solo: 0
@@ -83,7 +102,7 @@ State:
   m_Name: Walk
   m_Speed: 1
   m_Motions:
-  - {fileID: 7400000, guid: e985bab5b6386468d84521d0b985cbfe, type: 3}
+  - {fileID: 20600000}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 0, y: -96, z: 0}
   m_IKOnFeet: 1
@@ -103,22 +122,22 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_LocalTransitions:
     data:
-      first: {fileID: 110265056}
-      second:
-      - {fileID: 110185662}
-    data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
+    data:
+      first: {fileID: 110265056}
+      second:
+      - {fileID: 110185662}
   m_OrderedTransitions:
     data:
-      first: {fileID: 110265056}
-      second:
-      - {fileID: 110185662}
-    data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
+    data:
+      first: {fileID: 110265056}
+      second:
+      - {fileID: 110185662}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -276, y: 0, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

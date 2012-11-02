@@ -473,7 +473,7 @@ ModelImporter:
     4300110: l_ankleProxy_geo
     4300112: l_kneeProxy_geo
     4300114: l_hipProxy_geo
-    7400000: _1_Edit1_WalkFWD
+    7400000: Walk
     9500000: //RootNode
   materials:
     importMaterials: 0
@@ -488,7 +488,7 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     clipAnimations:
-    - name: _1_Edit1_WalkFWD
+    - name: Walk
       takeName: _1_Edit1_WalkFWD
       firstFrame: 0
       lastFrame: 90
