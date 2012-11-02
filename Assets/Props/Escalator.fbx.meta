@@ -14,6 +14,10 @@ ModelImporter:
     100016: Second Floor
     100018: Wall
     100020: Wall.1
+    100022: Wall.2
+    100024: Wall 1
+    100026: Wall 2
+    100028: Wall 3
     400000: //RootNode
     400002: Plane
     400004: Stair
@@ -25,6 +29,10 @@ ModelImporter:
     400016: Second Floor
     400018: Wall
     400020: Wall.1
+    400022: Wall.2
+    400024: Wall 1
+    400026: Wall 2
+    400028: Wall 3
     2300000: Plane
     2300002: Stair
     2300004: Box
@@ -35,6 +43,10 @@ ModelImporter:
     2300014: Second Floor
     2300016: Wall
     2300018: Wall.1
+    2300020: Wall.2
+    2300022: Wall 1
+    2300024: Wall 2
+    2300026: Wall 3
     3300000: Plane
     3300002: Stair
     3300004: Box
@@ -45,6 +57,10 @@ ModelImporter:
     3300014: Second Floor
     3300016: Wall
     3300018: Wall.1
+    3300020: Wall.2
+    3300022: Wall 1
+    3300024: Wall 2
+    3300026: Wall 3
     4300000: Plane
     4300002: Stair
     4300004: Stair.1
@@ -55,6 +71,10 @@ ModelImporter:
     4300014: Wall
     4300016: Wall.1
     4300018: Second Floor
+    4300020: Wall.2
+    4300022: Wall 1
+    4300024: Wall 3
+    4300026: Wall 2
     9500000: //RootNode
   materials:
     importMaterials: 0
