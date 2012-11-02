@@ -8,15 +8,18 @@ function Start() {
 
 	agent.updateRotation = false;
 
-	var entrance = GameObject.Find("Entrance " + Random.Range(1, 3)).transform;
+	var entranceName = (Random.value < 0.666) ? "Entrance 1" : "Entrance 2";
+	var entrance = GameObject.Find(entranceName).transform;
 	agent.SetDestination(entrance.position);
 
 	yield;
 
 	while (agent.remainingDistance > 0.1) {
-		animator.SetFloat("speed", agent.velocity.magnitude);
-		if (agent.velocity.magnitude > 0.1) {
-			transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(agent.velocity), 360.0 * Time.deltaTime);
+		var speed = agent.velocity.magnitude;
+		animator.SetFloat("speed", speed);
+		if (speed > 0.1) {
+			var rotation = Quaternion.LookRotation(agent.velocity);
+			transform.rotation = ExpEase.Out(transform.rotation, rotation, -4.0);
 		}
 		yield;
 	}
@@ -25,10 +28,11 @@ function Start() {
 	animator.SetFloat("speed", 0);
 
 	var target = entrance.Find("Target");
+	rotation = Quaternion.LookRotation(Vector3.Scale(target.position - entrance.position, Vector3(1, 0, 1)));
 
 	while ((target.position - transform.position).magnitude > 0.1) {
 		transform.position = Vector3.MoveTowards(transform.position, target.position, escalatorSpeed * Time.deltaTime);
-		transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.AngleAxis(180, Vector3.up), 30 * Time.deltaTime);
+		transform.rotation = ExpEase.Out(transform.rotation, rotation, -4.0);
 		yield;
 	}
 
