@@ -5,12 +5,19 @@ var fastForward = false;
 private var startTime = 0.0;
 
 function Start() {
+	var config = EscalatorConfig.instance;
 	var agent = GetComponent.<NavMeshAgent>();
 	var animator = GetComponent.<Animator>();
 
 	agent.updateRotation = false;
+	if (fastForward) agent.avoidancePriority = 0;
 
-	var entranceName = fastForward ? "Entrance 2" : "Entrance 1";
+	if (config.allowFastForward) {
+		var entranceName = fastForward ? "Entrance 2" : "Entrance 1";
+	} else {
+		entranceName = (transform.position.x > 0.0) ? "Entrance 1" : "Entrance 2";
+	}
+
 	var entrance = GameObject.Find(entranceName).transform;
 	agent.SetDestination(entrance.position);
 
@@ -33,7 +40,6 @@ function Start() {
 	var target = entrance.Find("Target");
 	rotation = Quaternion.LookRotation(Vector3.Scale(target.position - entrance.position, Vector3(1, 0, 1)));
 
-	var config = EscalatorConfig.instance;
 	var escalatorSpeed = fastForward ? config.fastForwardSpeed : config.escalatorSpeed;
 
 	while ((target.position - transform.position).magnitude > 0.1) {

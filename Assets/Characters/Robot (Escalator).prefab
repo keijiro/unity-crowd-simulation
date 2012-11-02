@@ -1402,7 +1402,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b5d0223030bb46dcb925a88c7f3cf3d, type: 3}
   m_Name: 
-  escalatorSpeed: 1.10000002
+  fastForward: 0
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1486,10 +1486,10 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100078}
   m_Enabled: 1
-  m_Radius: .219999999
+  m_Radius: .360000014
   m_Speed: 1.5
   m_Acceleration: 2
-  avoidancePriority: 0
+  avoidancePriority: 50
   m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 0

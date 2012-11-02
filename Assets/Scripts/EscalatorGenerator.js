@@ -10,7 +10,7 @@ function Start() {
 		var phi = Random.value * Mathf.PI * 2;
 		var pos = Vector3(Mathf.Sin(phi), 0.0, Mathf.Cos(phi));
 		var instance = Instantiate(prefab, pos * radius, Quaternion.identity) as GameObject;
-		instance.GetComponent.<EscalatorAI>().fastForward = (Random.value < config.fastForwardRatio);
+		instance.GetComponent.<EscalatorAI>().fastForward = config.allowFastForward && (Random.value < config.fastForwardRatio);
 		yield WaitForSeconds(60.0 / config.manPerMinute);
 	}
 }
