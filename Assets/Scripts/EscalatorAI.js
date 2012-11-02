@@ -3,6 +3,7 @@
 var fastForward = false;
 
 private var startTime = 0.0;
+private var entered : GameObject;
 
 function Start() {
 	var config = EscalatorConfig.instance;
@@ -10,7 +11,7 @@ function Start() {
 	var animator = GetComponent.<Animator>();
 
 	agent.updateRotation = false;
-	if (fastForward) agent.avoidancePriority = 0;
+	agent.avoidancePriority = fastForward ? 0 : 50;
 
 	if (config.allowFastForward) {
 		var entranceName = fastForward ? "Entrance 2" : "Entrance 1";
@@ -25,7 +26,7 @@ function Start() {
 
 	startTime = Time.time;
 
-	while (agent.remainingDistance > 0.1) {
+	while (!entered) {
 		var speed = agent.velocity.magnitude;
 		animator.SetFloat("speed", speed);
 		if (speed > 0.1) {
@@ -37,7 +38,9 @@ function Start() {
 
 	agent.enabled = false;
 
-	var target = entrance.Find("Target");
+	fastForward = config.allowFastForward && (entered.name == "Entrance 2");
+
+	var target = entered.transform.Find("Target");
 	rotation = Quaternion.LookRotation(Vector3.Scale(target.position - entrance.position, Vector3(1, 0, 1)));
 
 	var escalatorSpeed = fastForward ? config.fastForwardSpeed : config.escalatorSpeed;
@@ -45,11 +48,15 @@ function Start() {
 	while ((target.position - transform.position).magnitude > 0.1) {
 		transform.position = Vector3.MoveTowards(transform.position, target.position, escalatorSpeed * Time.deltaTime);
 		transform.rotation = ExpEase.Out(transform.rotation, rotation, -4.0);
-		animator.SetFloat("speed", fastForward ? 1.0 : 0.0, 1.0, Time.deltaTime);
+		animator.SetFloat("speed", fastForward ? 1.0 : 0.0, 0.4, Time.deltaTime);
 		yield;
 	}
 
 	FindObjectOfType(EscalatorSummarizer).NotifyTime(Time.time - startTime);
 
 	Destroy(gameObject);
+}
+
+function OnTriggerEnter(other : Collider) {
+	entered = other.gameObject;
 }
