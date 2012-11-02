@@ -2,6 +2,8 @@
 
 var fastForward = false;
 
+private var startTime = 0.0;
+
 function Start() {
 	var agent = GetComponent.<NavMeshAgent>();
 	var animator = GetComponent.<Animator>();
@@ -13,6 +15,8 @@ function Start() {
 	agent.SetDestination(entrance.position);
 
 	yield;
+
+	startTime = Time.time;
 
 	while (agent.remainingDistance > 0.1) {
 		var speed = agent.velocity.magnitude;
@@ -38,6 +42,8 @@ function Start() {
 		animator.SetFloat("speed", fastForward ? 1.0 : 0.0, 1.0, Time.deltaTime);
 		yield;
 	}
+
+	FindObjectOfType(EscalatorSummarizer).NotifyTime(Time.time - startTime);
 
 	Destroy(gameObject);
 }
