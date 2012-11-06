@@ -812,8 +812,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
-  interval: .400000006
-  speed: 1.60000002
+  interval: .800000012
+  speed: .800000012
   radius: .400000006
 --- !u!1 &1393324127
 GameObject:
@@ -952,7 +952,8 @@ MonoBehaviour:
   - {fileID: 100078, guid: daee4a681703d4f70b6cd5883c4e79f7, type: 2}
   radius: 9
   interval: .5
-  ratio: .800000012
+  ratio: .5
+  altMode: 1
 --- !u!1 &1729013052
 GameObject:
   m_ObjectHideFlags: 0
