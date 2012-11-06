@@ -2,7 +2,6 @@
 
 var fastForward = false;
 
-private var startTime = 0.0;
 private var entered : GameObject;
 
 function Start() {
@@ -23,8 +22,6 @@ function Start() {
 	agent.SetDestination(entrance.position);
 
 	yield;
-
-	startTime = Time.time;
 
 	while (!entered) {
 		var speed = agent.velocity.magnitude;
@@ -51,8 +48,6 @@ function Start() {
 		animator.SetFloat("speed", fastForward ? 1.0 : 0.0, 0.4, Time.deltaTime);
 		yield;
 	}
-
-	FindObjectOfType(EscalatorSummarizer).NotifyTime(Time.time - startTime);
 
 	Destroy(gameObject);
 }
