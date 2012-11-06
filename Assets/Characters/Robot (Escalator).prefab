@@ -1500,14 +1500,14 @@ NavMeshAgent:
   m_Enabled: 1
   m_Radius: .349999994
   m_Speed: 1.5
-  m_Acceleration: 2
+  m_Acceleration: 4
   avoidancePriority: 50
   m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 0
   m_AutoRepath: 1
   m_Height: 1.60000002
-  m_BaseOffset: -.200000003
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!1001 &100100000

@@ -65,7 +65,7 @@ LightmapSettings:
 NavMeshSettings:
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    agentRadius: .200000003
+    agentRadius: .300000012
     agentHeight: 2
     agentSlope: 45
     agentClimb: .100000001
@@ -74,7 +74,7 @@ NavMeshSettings:
     accuratePlacement: 0
     minRegionArea: 2
     widthInaccuracy: 16.666666
-    heightInaccuracy: 10
+    heightInaccuracy: 1
   m_NavMesh: {fileID: 19400000, guid: a93a0c8643ac44be1938df883c953c40, type: 2}
 --- !u!1 &1248652
 GameObject:
@@ -2002,7 +2002,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2740,7 +2740,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3638,10 +3638,10 @@ GameObject:
   - 95: {fileID: 209280428}
   - 114: {fileID: 209280427}
   - 195: {fileID: 209280426}
-  - 135: {fileID: 209280425}
   - 54: {fileID: 209280424}
+  - 136: {fileID: 209280425}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3654,7 +3654,7 @@ Transform:
   m_PrefabInternal: {fileID: 621204064}
   m_GameObject: {fileID: 209280422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.17074966, y: 0, z: -2.60662746}
+  m_LocalPosition: {x: -3.17074966, y: .100000001, z: -2.60662746}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1996170898}
@@ -3676,19 +3676,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &209280425
-SphereCollider:
+--- !u!136 &209280425
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 621204064}
   m_GameObject: {fileID: 209280422}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &209280426
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3697,15 +3698,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 621204064}
   m_GameObject: {fileID: 209280422}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -4099,7 +4100,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4370,6 +4371,96 @@ Transform:
   m_Children:
   - {fileID: 1114888168}
   m_Father: {fileID: 1033305922}
+--- !u!1 &249473169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 249473175}
+  - 20: {fileID: 249473174}
+  - 92: {fileID: 249473173}
+  - 124: {fileID: 249473172}
+  - 81: {fileID: 249473171}
+  - 114: {fileID: 249473170}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &249473170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 249473169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ed0613dc2c7e4e5bae7c27b97e6876e, type: 3}
+  m_Name: 
+--- !u!81 &249473171
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 249473169}
+  m_Enabled: 1
+--- !u!124 &249473172
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 249473169}
+  m_Enabled: 1
+--- !u!92 &249473173
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 249473169}
+  m_Enabled: 1
+--- !u!20 &249473174
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 249473169}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: .106928065, g: .111779429, b: .119403005, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 100
+  field of view: 45
+  orthographic: 0
+  orthographic size: 100
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_HDR: 0
+--- !u!4 &249473175
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 249473169}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0, z: -16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 732503147}
 --- !u!1 &252661219
 GameObject:
   m_ObjectHideFlags: 0
@@ -6161,10 +6252,10 @@ GameObject:
   - 95: {fileID: 363213523}
   - 114: {fileID: 363213522}
   - 195: {fileID: 363213521}
-  - 135: {fileID: 363213520}
   - 54: {fileID: 363213519}
+  - 136: {fileID: 363213520}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6177,7 +6268,7 @@ Transform:
   m_PrefabInternal: {fileID: 1671655007}
   m_GameObject: {fileID: 363213517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.27288055, y: 0, z: 2.43167639}
+  m_LocalPosition: {x: -4.27288055, y: .100000001, z: 2.43167639}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1618969951}
@@ -6199,19 +6290,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &363213520
-SphereCollider:
+--- !u!136 &363213520
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 1671655007}
   m_GameObject: {fileID: 363213517}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &363213521
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6220,15 +6312,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 1671655007}
   m_GameObject: {fileID: 363213517}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -7407,10 +7499,10 @@ GameObject:
   - 95: {fileID: 423665242}
   - 114: {fileID: 423665241}
   - 195: {fileID: 423665240}
-  - 135: {fileID: 423665239}
   - 54: {fileID: 423665238}
+  - 136: {fileID: 423665239}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7423,7 +7515,7 @@ Transform:
   m_PrefabInternal: {fileID: 619615242}
   m_GameObject: {fileID: 423665236}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.98181581, y: 0, z: 2.40018654}
+  m_LocalPosition: {x: -2.98181581, y: .100000001, z: 2.40018654}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 643585629}
@@ -7445,19 +7537,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &423665239
-SphereCollider:
+--- !u!136 &423665239
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 619615242}
   m_GameObject: {fileID: 423665236}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &423665240
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7466,15 +7559,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 619615242}
   m_GameObject: {fileID: 423665236}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -8398,7 +8491,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9679,7 +9772,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10866,7 +10959,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10931,10 +11024,10 @@ GameObject:
   - 95: {fileID: 620328190}
   - 114: {fileID: 620328189}
   - 195: {fileID: 620328188}
-  - 135: {fileID: 620328187}
   - 54: {fileID: 620328186}
+  - 136: {fileID: 620328187}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10947,7 +11040,7 @@ Transform:
   m_PrefabInternal: {fileID: 115426339}
   m_GameObject: {fileID: 620328184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .576487064, y: 0, z: -.181947112}
+  m_LocalPosition: {x: .576487064, y: .100000001, z: -.181947112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1863567357}
@@ -10969,19 +11062,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &620328187
-SphereCollider:
+--- !u!136 &620328187
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 115426339}
   m_GameObject: {fileID: 620328184}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &620328188
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10990,15 +11084,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 115426339}
   m_GameObject: {fileID: 620328184}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -11066,7 +11160,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -11798,7 +11892,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -11921,7 +12015,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12230,10 +12324,10 @@ GameObject:
   - 95: {fileID: 689512562}
   - 114: {fileID: 689512561}
   - 195: {fileID: 689512560}
-  - 135: {fileID: 689512559}
   - 54: {fileID: 689512558}
+  - 136: {fileID: 689512559}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12246,7 +12340,7 @@ Transform:
   m_PrefabInternal: {fileID: 662739137}
   m_GameObject: {fileID: 689512556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.4618144, y: 0, z: -2.57513762}
+  m_LocalPosition: {x: -4.4618144, y: .100000001, z: -2.57513762}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1053141241}
@@ -12268,19 +12362,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &689512559
-SphereCollider:
+--- !u!136 &689512559
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 662739137}
   m_GameObject: {fileID: 689512556}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &689512560
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12289,15 +12384,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 662739137}
   m_GameObject: {fileID: 689512556}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -12661,7 +12756,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13062,6 +13157,33 @@ Transform:
   - {fileID: 114646957}
   - {fileID: 2073980981}
   m_Father: {fileID: 353257475}
+--- !u!1 &732503146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 732503147}
+  m_Layer: 0
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &732503147
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 732503146}
+  m_LocalRotation: {x: .390731215, y: 0, z: 0, w: .920504868}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 249473175}
+  m_Father: {fileID: 835930086}
 --- !u!1 &733326011
 GameObject:
   m_ObjectHideFlags: 0
@@ -13396,10 +13518,10 @@ GameObject:
   - 95: {fileID: 749640706}
   - 114: {fileID: 749640705}
   - 195: {fileID: 749640704}
-  - 135: {fileID: 749640703}
   - 54: {fileID: 749640702}
+  - 136: {fileID: 749640703}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13412,7 +13534,7 @@ Transform:
   m_PrefabInternal: {fileID: 172101279}
   m_GameObject: {fileID: 749640700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.620107651, y: 0, z: -4.90541267}
+  m_LocalPosition: {x: -.620107651, y: .100000001, z: -4.90541267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 978852816}
@@ -13434,19 +13556,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &749640703
-SphereCollider:
+--- !u!136 &749640703
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 172101279}
   m_GameObject: {fileID: 749640700}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &749640704
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13455,15 +13578,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 172101279}
   m_GameObject: {fileID: 749640700}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -13503,10 +13626,10 @@ GameObject:
   - 95: {fileID: 753551248}
   - 114: {fileID: 753551247}
   - 195: {fileID: 753551246}
-  - 135: {fileID: 753551245}
   - 54: {fileID: 753551244}
+  - 136: {fileID: 753551245}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13519,7 +13642,7 @@ Transform:
   m_PrefabInternal: {fileID: 1341792473}
   m_GameObject: {fileID: 753551242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.651599884, y: 0, z: 2.43167639}
+  m_LocalPosition: {x: -.651599884, y: .100000001, z: 2.43167639}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2012150779}
@@ -13541,19 +13664,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &753551245
-SphereCollider:
+--- !u!136 &753551245
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 1341792473}
   m_GameObject: {fileID: 753551242}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &753551246
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13562,15 +13686,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 1341792473}
   m_GameObject: {fileID: 753551242}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -14534,6 +14658,33 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1027650649}
+--- !u!1 &835930085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 835930086}
+  m_Layer: 0
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &835930086
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 835930085}
+  m_LocalRotation: {x: 0, y: .939692557, z: 0, w: -.342020363}
+  m_LocalPosition: {x: 1.5, y: 0, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 732503147}
+  m_Father: {fileID: 0}
 --- !u!1 &837177862
 GameObject:
   m_ObjectHideFlags: 0
@@ -14892,10 +15043,10 @@ GameObject:
   - 95: {fileID: 850277153}
   - 114: {fileID: 850277152}
   - 195: {fileID: 850277151}
-  - 135: {fileID: 850277150}
   - 54: {fileID: 850277149}
+  - 136: {fileID: 850277150}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14908,7 +15059,7 @@ Transform:
   m_PrefabInternal: {fileID: 229707890}
   m_GameObject: {fileID: 850277147}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.35521603, y: 0, z: -2.70109582}
+  m_LocalPosition: {x: 4.35521603, y: .100000001, z: -2.70109582}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1911641290}
@@ -14930,19 +15081,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &850277150
-SphereCollider:
+--- !u!136 &850277150
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 229707890}
   m_GameObject: {fileID: 850277147}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &850277151
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14951,15 +15103,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 229707890}
   m_GameObject: {fileID: 850277147}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -15752,10 +15904,10 @@ GameObject:
   - 95: {fileID: 893346186}
   - 114: {fileID: 893346185}
   - 195: {fileID: 893346184}
-  - 135: {fileID: 893346183}
   - 54: {fileID: 893346182}
+  - 136: {fileID: 893346183}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15768,7 +15920,7 @@ Transform:
   m_PrefabInternal: {fileID: 1318395100}
   m_GameObject: {fileID: 893346180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.35521603, y: 0, z: -4.99988127}
+  m_LocalPosition: {x: 4.35521603, y: .100000001, z: -4.99988127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1841728497}
@@ -15790,19 +15942,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &893346183
-SphereCollider:
+--- !u!136 &893346183
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 1318395100}
   m_GameObject: {fileID: 893346180}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &893346184
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15811,15 +15964,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 1318395100}
   m_GameObject: {fileID: 893346180}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -16752,10 +16905,10 @@ GameObject:
   - 95: {fileID: 956139247}
   - 114: {fileID: 956139246}
   - 195: {fileID: 956139245}
-  - 135: {fileID: 956139244}
   - 54: {fileID: 956139243}
+  - 136: {fileID: 956139244}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16768,7 +16921,7 @@ Transform:
   m_PrefabInternal: {fileID: 706393206}
   m_GameObject: {fileID: 956139241}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.48117161, y: 0, z: 2.43167567}
+  m_LocalPosition: {x: 4.48117161, y: .100000001, z: 2.43167567}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1007212064}
@@ -16790,19 +16943,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &956139244
-SphereCollider:
+--- !u!136 &956139244
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 706393206}
   m_GameObject: {fileID: 956139241}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &956139245
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16811,15 +16965,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 706393206}
   m_GameObject: {fileID: 956139241}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -17078,10 +17232,10 @@ GameObject:
   - 95: {fileID: 966407356}
   - 114: {fileID: 966407355}
   - 195: {fileID: 966407354}
-  - 135: {fileID: 966407353}
   - 54: {fileID: 966407352}
+  - 136: {fileID: 966407353}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17094,7 +17248,7 @@ Transform:
   m_PrefabInternal: {fileID: 1964529165}
   m_GameObject: {fileID: 966407350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.13926172, y: 0, z: -.150457859}
+  m_LocalPosition: {x: -3.13926172, y: .100000001, z: -.150457859}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 278123894}
@@ -17116,19 +17270,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &966407353
-SphereCollider:
+--- !u!136 &966407353
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 1964529165}
   m_GameObject: {fileID: 966407350}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &966407354
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -17137,15 +17292,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 1964529165}
   m_GameObject: {fileID: 966407350}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -17240,7 +17395,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -19005,10 +19160,10 @@ GameObject:
   - 95: {fileID: 1056636745}
   - 114: {fileID: 1056636744}
   - 195: {fileID: 1056636743}
-  - 135: {fileID: 1056636742}
   - 54: {fileID: 1056636741}
+  - 136: {fileID: 1056636742}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19021,7 +19176,7 @@ Transform:
   m_PrefabInternal: {fileID: 969807829}
   m_GameObject: {fileID: 1056636739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.620107651, y: 0, z: -2.60662723}
+  m_LocalPosition: {x: -.620107651, y: .100000001, z: -2.60662723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 36974223}
@@ -19043,19 +19198,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &1056636742
-SphereCollider:
+--- !u!136 &1056636742
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 969807829}
   m_GameObject: {fileID: 1056636739}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1056636743
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -19064,15 +19220,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 969807829}
   m_GameObject: {fileID: 1056636739}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -20387,7 +20543,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -21922,7 +22078,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -23264,7 +23420,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -23465,7 +23621,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -23781,10 +23937,10 @@ GameObject:
   - 95: {fileID: 1339460557}
   - 114: {fileID: 1339460556}
   - 195: {fileID: 1339460555}
-  - 135: {fileID: 1339460554}
   - 54: {fileID: 1339460553}
+  - 136: {fileID: 1339460554}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23797,7 +23953,7 @@ Transform:
   m_PrefabInternal: {fileID: 544134181}
   m_GameObject: {fileID: 1339460551}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.15861845, y: 0, z: -.150457263}
+  m_LocalPosition: {x: 3.15861845, y: .100000001, z: -.150457263}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1692047246}
@@ -23819,19 +23975,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &1339460554
-SphereCollider:
+--- !u!136 &1339460554
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 544134181}
   m_GameObject: {fileID: 1339460551}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1339460555
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -23840,15 +23997,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 544134181}
   m_GameObject: {fileID: 1339460551}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -23917,7 +24074,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -24418,10 +24575,10 @@ GameObject:
   - 95: {fileID: 1377007917}
   - 114: {fileID: 1377007916}
   - 195: {fileID: 1377007915}
-  - 135: {fileID: 1377007914}
   - 54: {fileID: 1377007913}
+  - 136: {fileID: 1377007914}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24434,7 +24591,7 @@ Transform:
   m_PrefabInternal: {fileID: 1136043216}
   m_GameObject: {fileID: 1377007911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.06415129, y: 0, z: -2.66960597}
+  m_LocalPosition: {x: 3.06415129, y: .100000001, z: -2.66960597}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1742691191}
@@ -24456,19 +24613,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &1377007914
-SphereCollider:
+--- !u!136 &1377007914
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 1136043216}
   m_GameObject: {fileID: 1377007911}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1377007915
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -24477,15 +24635,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 1136043216}
   m_GameObject: {fileID: 1377007911}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -24981,7 +25139,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -25133,7 +25291,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -25256,10 +25414,10 @@ GameObject:
   - 95: {fileID: 1403648140}
   - 114: {fileID: 1403648139}
   - 195: {fileID: 1403648138}
-  - 135: {fileID: 1403648137}
   - 54: {fileID: 1403648136}
+  - 136: {fileID: 1403648137}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25272,7 +25430,7 @@ Transform:
   m_PrefabInternal: {fileID: 1397627902}
   m_GameObject: {fileID: 1403648134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.17074966, y: 0, z: -4.90541315}
+  m_LocalPosition: {x: -3.17074966, y: .100000001, z: -4.90541315}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2037918174}
@@ -25294,19 +25452,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &1403648137
-SphereCollider:
+--- !u!136 &1403648137
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 1397627902}
   m_GameObject: {fileID: 1403648134}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1403648138
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -25315,15 +25474,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 1397627902}
   m_GameObject: {fileID: 1403648134}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -25816,10 +25975,10 @@ GameObject:
   - 95: {fileID: 1451462149}
   - 114: {fileID: 1451462148}
   - 195: {fileID: 1451462147}
-  - 135: {fileID: 1451462146}
   - 54: {fileID: 1451462145}
+  - 136: {fileID: 1451462146}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25832,7 +25991,7 @@ Transform:
   m_PrefabInternal: {fileID: 1920443214}
   m_GameObject: {fileID: 1451462143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.44968319, y: 0, z: -.181947112}
+  m_LocalPosition: {x: 4.44968319, y: .100000001, z: -.181947112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1921841551}
@@ -25854,19 +26013,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &1451462146
-SphereCollider:
+--- !u!136 &1451462146
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 1920443214}
   m_GameObject: {fileID: 1451462143}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1451462147
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -25875,15 +26035,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 1920443214}
   m_GameObject: {fileID: 1451462143}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -26558,33 +26718,6 @@ Transform:
   m_Children:
   - {fileID: 1391186733}
   m_Father: {fileID: 343916421}
---- !u!1 &1495292961
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1495292962}
-  m_Layer: 0
-  m_Name: Pivot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1495292962
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1495292961}
-  m_LocalRotation: {x: -.193514347, y: .785245776, z: -.300563127, w: -.50557214}
-  m_LocalPosition: {x: 4.4000001, y: 1, z: 1.38}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1673058229}
-  m_Father: {fileID: 0}
 --- !u!1 &1495812169
 GameObject:
   m_ObjectHideFlags: 0
@@ -27062,10 +27195,10 @@ GameObject:
   - 95: {fileID: 1527013232}
   - 114: {fileID: 1527013231}
   - 195: {fileID: 1527013230}
-  - 135: {fileID: 1527013229}
   - 54: {fileID: 1527013228}
+  - 136: {fileID: 1527013229}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27078,7 +27211,7 @@ Transform:
   m_PrefabInternal: {fileID: 665588957}
   m_GameObject: {fileID: 1527013226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .639464855, y: 0, z: 2.40018654}
+  m_LocalPosition: {x: .639464855, y: .100000001, z: 2.40018654}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1204623520}
@@ -27100,19 +27233,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &1527013229
-SphereCollider:
+--- !u!136 &1527013229
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 665588957}
   m_GameObject: {fileID: 1527013226}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1527013230
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -27121,15 +27255,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 665588957}
   m_GameObject: {fileID: 1527013226}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -29186,10 +29320,10 @@ GameObject:
   - 95: {fileID: 1654591688}
   - 114: {fileID: 1654591687}
   - 195: {fileID: 1654591686}
-  - 135: {fileID: 1654591685}
   - 54: {fileID: 1654591684}
+  - 136: {fileID: 1654591685}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29202,7 +29336,7 @@ Transform:
   m_PrefabInternal: {fileID: 1395780504}
   m_GameObject: {fileID: 1654591682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.4618144, y: 0, z: -4.87392282}
+  m_LocalPosition: {x: -4.4618144, y: .100000001, z: -4.87392282}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1056336499}
@@ -29224,19 +29358,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &1654591685
-SphereCollider:
+--- !u!136 &1654591685
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 1395780504}
   m_GameObject: {fileID: 1654591682}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1654591686
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -29245,15 +29380,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 1395780504}
   m_GameObject: {fileID: 1654591682}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -29643,7 +29778,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -29670,85 +29805,6 @@ Prefab:
   m_RootGameObject: {fileID: 363213517}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &1673058224
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1673058229}
-  - 20: {fileID: 1673058228}
-  - 92: {fileID: 1673058227}
-  - 124: {fileID: 1673058226}
-  - 81: {fileID: 1673058225}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &1673058225
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1673058224}
-  m_Enabled: 1
---- !u!124 &1673058226
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1673058224}
-  m_Enabled: 1
---- !u!92 &1673058227
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1673058224}
-  m_Enabled: 1
---- !u!20 &1673058228
-Camera:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1673058224}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: .179104507, g: .179104507, b: .179104507, a: .0196078438}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: .300000012
-  far clip plane: 100
-  field of view: 50
-  orthographic: 0
-  orthographic size: 100
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_HDR: 0
---- !u!4 &1673058229
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1673058224}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10.96}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1495292962}
 --- !u!1 &1677776788
 GameObject:
   m_ObjectHideFlags: 0
@@ -30923,10 +30979,10 @@ GameObject:
   - 95: {fileID: 1742615747}
   - 114: {fileID: 1742615746}
   - 195: {fileID: 1742615745}
-  - 135: {fileID: 1742615744}
   - 54: {fileID: 1742615743}
+  - 136: {fileID: 1742615744}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30939,7 +30995,7 @@ Transform:
   m_PrefabInternal: {fileID: 1789159517}
   m_GameObject: {fileID: 1742615741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.19010687, y: 0, z: 2.46316552}
+  m_LocalPosition: {x: 3.19010687, y: .100000001, z: 2.46316552}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 255614243}
@@ -30961,19 +31017,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &1742615744
-SphereCollider:
+--- !u!136 &1742615744
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 1789159517}
   m_GameObject: {fileID: 1742615741}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1742615745
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -30982,15 +31039,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 1789159517}
   m_GameObject: {fileID: 1742615741}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -31381,10 +31438,10 @@ GameObject:
   - 95: {fileID: 1761233015}
   - 114: {fileID: 1761233014}
   - 195: {fileID: 1761233013}
-  - 135: {fileID: 1761233012}
   - 54: {fileID: 1761233011}
+  - 136: {fileID: 1761233012}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31397,7 +31454,7 @@ Transform:
   m_PrefabInternal: {fileID: 2128380591}
   m_GameObject: {fileID: 1761233009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .670957088, y: 0, z: -4.93690252}
+  m_LocalPosition: {x: .670957088, y: .100000001, z: -4.93690252}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 440454932}
@@ -31419,19 +31476,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &1761233012
-SphereCollider:
+--- !u!136 &1761233012
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 2128380591}
   m_GameObject: {fileID: 1761233009}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1761233013
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -31440,15 +31498,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 2128380591}
   m_GameObject: {fileID: 1761233009}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -32025,7 +32083,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -32579,7 +32637,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -32728,10 +32786,10 @@ GameObject:
   - 95: {fileID: 1832469098}
   - 114: {fileID: 1832469097}
   - 195: {fileID: 1832469096}
-  - 135: {fileID: 1832469095}
   - 54: {fileID: 1832469094}
+  - 136: {fileID: 1832469095}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32744,7 +32802,7 @@ Transform:
   m_PrefabInternal: {fileID: 1825399052}
   m_GameObject: {fileID: 1832469092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .670957088, y: 0, z: -2.63811707}
+  m_LocalPosition: {x: .670957088, y: .100000001, z: -2.63811707}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1379597498}
@@ -32766,19 +32824,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &1832469095
-SphereCollider:
+--- !u!136 &1832469095
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 1825399052}
   m_GameObject: {fileID: 1832469092}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1832469096
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -32787,15 +32846,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 1825399052}
   m_GameObject: {fileID: 1832469092}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -34413,7 +34472,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -35182,7 +35241,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -35599,10 +35658,10 @@ GameObject:
   - 95: {fileID: 1994066798}
   - 114: {fileID: 1994066797}
   - 195: {fileID: 1994066796}
-  - 135: {fileID: 1994066795}
   - 54: {fileID: 1994066794}
+  - 136: {fileID: 1994066795}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35615,7 +35674,7 @@ Transform:
   m_PrefabInternal: {fileID: 477621366}
   m_GameObject: {fileID: 1994066792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.714578152, y: 0, z: -.150457263}
+  m_LocalPosition: {x: -.714578152, y: .100000001, z: -.150457263}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1082453689}
@@ -35637,19 +35696,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &1994066795
-SphereCollider:
+--- !u!136 &1994066795
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 477621366}
   m_GameObject: {fileID: 1994066792}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1994066796
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -35658,15 +35718,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 477621366}
   m_GameObject: {fileID: 1994066792}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -35891,10 +35951,10 @@ GameObject:
   - 95: {fileID: 2001844988}
   - 114: {fileID: 2001844987}
   - 195: {fileID: 2001844986}
-  - 135: {fileID: 2001844985}
   - 54: {fileID: 2001844984}
+  - 136: {fileID: 2001844985}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35907,7 +35967,7 @@ Transform:
   m_PrefabInternal: {fileID: 1235038914}
   m_GameObject: {fileID: 2001844982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.06415129, y: 0, z: -4.96839142}
+  m_LocalPosition: {x: 3.06415129, y: .100000001, z: -4.96839142}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 865285600}
@@ -35929,19 +35989,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &2001844985
-SphereCollider:
+--- !u!136 &2001844985
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 1235038914}
   m_GameObject: {fileID: 2001844982}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &2001844986
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -35950,15 +36011,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 1235038914}
   m_GameObject: {fileID: 2001844982}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -37901,7 +37962,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 59d6d342d65f844d6a71664fe8cdd9b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -38133,10 +38194,10 @@ GameObject:
   - 95: {fileID: 2143309566}
   - 114: {fileID: 2143309565}
   - 195: {fileID: 2143309564}
-  - 135: {fileID: 2143309563}
   - 54: {fileID: 2143309562}
+  - 136: {fileID: 2143309563}
   m_Layer: 9
-  m_Name: Robot Kyle
+  m_Name: Robot (Evacuation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38149,7 +38210,7 @@ Transform:
   m_PrefabInternal: {fileID: 1328069316}
   m_GameObject: {fileID: 2143309560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.43032694, y: 0, z: -.11896801}
+  m_LocalPosition: {x: -4.43032694, y: .100000001, z: -.11896801}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 186505282}
@@ -38171,19 +38232,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &2143309563
-SphereCollider:
+--- !u!136 &2143309563
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13500000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
+  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
     type: 2}
   m_PrefabInternal: {fileID: 1328069316}
   m_GameObject: {fileID: 2143309560}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .300000012
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: .25
+  m_Height: 1.79999995
+  m_Direction: 1
+  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &2143309564
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -38192,15 +38254,15 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 1328069316}
   m_GameObject: {fileID: 2143309560}
   m_Enabled: 1
-  m_Radius: .5
-  m_Speed: 2
+  m_Radius: .300000012
+  m_Speed: 1.5
   m_Acceleration: 4
-  m_AvoidancePriority: 0
-  m_AngularSpeed: 300
+  avoidancePriority: 50
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.60000002
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

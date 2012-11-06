@@ -2,10 +2,13 @@
 
 var delay = 0.0;
 
+private var animator : Animator;
 private var agent : NavMeshAgent;
 
 function Awake() {
+	animator = GetComponent.<Animator>();
 	agent = GetComponent.<NavMeshAgent>();
+	agent.updateRotation = false;
 }
 
 function Start() {
@@ -16,8 +19,12 @@ function Start() {
 }
 
 function Update() {
-	var animator = GetComponent.<Animator>();
-	animator.SetFloat("speed", agent.velocity.magnitude);
+	var speed = agent.velocity.magnitude;
+	animator.SetFloat("speed", speed);
+	if (speed > 0.1) {
+		var rotation = Quaternion.LookRotation(agent.velocity);
+		transform.rotation = ExpEase.Out(transform.rotation, rotation, -4.0);
+	}
 }
 
 function OnTriggerEnter(other : Collider) {
