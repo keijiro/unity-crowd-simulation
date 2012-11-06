@@ -1,18 +1,23 @@
 #pragma strict
 
-var entranceName = "Entrance 1";
-
 private var agent : NavMeshAgent;
 private var animator : Animator;
+
 private var ridden = false;
 
-function Start() {
+function Awake() {
 	agent = GetComponent.<NavMeshAgent>();
 	animator = GetComponent.<Animator>();
-
 	agent.updateRotation = false;
-	agent.SetDestination(GameObject.Find(entranceName).transform.position);
+}
 
+function SetConfig(alt : boolean) {
+	var entranceName = alt ? "Entrance 2" : "Entrance 1";
+	agent.SetDestination(GameObject.Find(entranceName).transform.position);
+	if (alt) gameObject.layer++;
+}
+
+function Start() {
 	while (!ridden) {
 		var speed = agent.velocity.magnitude;
 		animator.SetFloat("speed", speed);
@@ -24,7 +29,7 @@ function Start() {
 	}
 }
 
-function RideOnEscalator(entrance : Vector3, target : Vector3, escalatorSpeed : float) {
+function RideOnEscalator(entrance : Vector3, target : Vector3, escalatorSpeed : float, animSpeed : float) {
 	ridden = true;
 	agent.enabled = false;
 	collider.enabled = false;
@@ -34,7 +39,7 @@ function RideOnEscalator(entrance : Vector3, target : Vector3, escalatorSpeed : 
 	for (var time = 0.0; time < 0.5; time += Time.deltaTime) {
 		transform.position = ExpEase.Out(transform.position, entrance, -4.0);
 		transform.rotation = ExpEase.Out(transform.rotation, rotation, -4.0);
-		animator.SetFloat("speed", 0.0, 0.2, Time.deltaTime);
+		animator.SetFloat("speed", animSpeed, 0.2, Time.deltaTime);
 		yield;
 	}
 

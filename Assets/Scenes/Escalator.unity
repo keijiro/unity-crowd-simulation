@@ -351,7 +351,9 @@ MonoBehaviour:
     m_Bits: 512
   interval: .800000012
   speed: .800000012
+  multiplier: 2
   radius: .400000006
+  fastForward: 0
 --- !u!1001 &1099810060
 Prefab:
   m_ObjectHideFlags: 0
@@ -812,9 +814,11 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
-  interval: .400000006
-  speed: 1.60000002
+  interval: .800000012
+  speed: .800000012
+  multiplier: 2
   radius: .400000006
+  fastForward: 1
 --- !u!1 &1393324127
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,43 +877,6 @@ Transform:
   - {fileID: 626123482}
   - {fileID: 1126703556}
   m_Father: {fileID: 0}
---- !u!1 &1456042287
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1456042288}
-  - 114: {fileID: 1456042289}
-  m_Layer: 0
-  m_Name: Configuration
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1456042288
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1456042287}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
---- !u!114 &1456042289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1456042287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26076ee39f02f4059b39e0d4f6009dbe, type: 3}
-  m_Name: 
 --- !u!1 &1458682879
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,12 +914,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0410591b702d54fc78e9d2b21231731e, type: 3}
   m_Name: 
-  prefabs:
-  - {fileID: 100078, guid: c3467683bb3c947ea962bf4b3ec40da1, type: 2}
-  - {fileID: 100078, guid: daee4a681703d4f70b6cd5883c4e79f7, type: 2}
+  prefab: {fileID: 100078, guid: c3467683bb3c947ea962bf4b3ec40da1, type: 2}
   radius: 9
   interval: .5
-  ratio: .800000012
+  ratio: .200000003
 --- !u!1 &1729013052
 GameObject:
   m_ObjectHideFlags: 0

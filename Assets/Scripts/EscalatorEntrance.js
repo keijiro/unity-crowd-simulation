@@ -3,7 +3,9 @@
 var layerMask : LayerMask;
 var interval = 0.8;
 var speed = 0.8;
+var multiplier = 2.0;
 var radius = 0.2;
+var fastForward = false;
 
 function Start() {
 	var target = transform.Find("Target").position;
@@ -16,9 +18,15 @@ function Start() {
 		}
 
 		var ai = colliders[0].GetComponent.<EscalatorAI>();
-		ai.RideOnEscalator(transform.position, target, speed);
 
-		yield WaitForSeconds(interval);
+		if (fastForward) {
+			ai.RideOnEscalator(transform.position, target, speed * multiplier, 1.0);
+			yield WaitForSeconds(interval / multiplier);
+
+		} else {
+			ai.RideOnEscalator(transform.position, target, speed, 0.0);
+			yield WaitForSeconds(interval);
+		}
 	}
 }
 
