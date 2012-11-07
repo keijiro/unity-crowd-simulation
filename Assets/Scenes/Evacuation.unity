@@ -3638,8 +3638,6 @@ GameObject:
   - 95: {fileID: 209280428}
   - 114: {fileID: 209280427}
   - 195: {fileID: 209280426}
-  - 54: {fileID: 209280424}
-  - 136: {fileID: 209280425}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -3660,36 +3658,6 @@ Transform:
   - {fileID: 1996170898}
   - {fileID: 535968261}
   m_Father: {fileID: 0}
---- !u!54 &209280424
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 621204064}
-  m_GameObject: {fileID: 209280422}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &209280425
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 621204064}
-  m_GameObject: {fileID: 209280422}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &209280426
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6252,8 +6220,6 @@ GameObject:
   - 95: {fileID: 363213523}
   - 114: {fileID: 363213522}
   - 195: {fileID: 363213521}
-  - 54: {fileID: 363213519}
-  - 136: {fileID: 363213520}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -6274,36 +6240,6 @@ Transform:
   - {fileID: 1618969951}
   - {fileID: 91868401}
   m_Father: {fileID: 0}
---- !u!54 &363213519
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1671655007}
-  m_GameObject: {fileID: 363213517}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &363213520
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1671655007}
-  m_GameObject: {fileID: 363213517}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &363213521
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7499,8 +7435,6 @@ GameObject:
   - 95: {fileID: 423665242}
   - 114: {fileID: 423665241}
   - 195: {fileID: 423665240}
-  - 54: {fileID: 423665238}
-  - 136: {fileID: 423665239}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -7521,36 +7455,6 @@ Transform:
   - {fileID: 643585629}
   - {fileID: 1160792508}
   m_Father: {fileID: 0}
---- !u!54 &423665238
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 619615242}
-  m_GameObject: {fileID: 423665236}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &423665239
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 619615242}
-  m_GameObject: {fileID: 423665236}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &423665240
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11024,8 +10928,6 @@ GameObject:
   - 95: {fileID: 620328190}
   - 114: {fileID: 620328189}
   - 195: {fileID: 620328188}
-  - 54: {fileID: 620328186}
-  - 136: {fileID: 620328187}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -11046,36 +10948,6 @@ Transform:
   - {fileID: 1863567357}
   - {fileID: 1035230773}
   m_Father: {fileID: 0}
---- !u!54 &620328186
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 115426339}
-  m_GameObject: {fileID: 620328184}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &620328187
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 115426339}
-  m_GameObject: {fileID: 620328184}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &620328188
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12324,8 +12196,6 @@ GameObject:
   - 95: {fileID: 689512562}
   - 114: {fileID: 689512561}
   - 195: {fileID: 689512560}
-  - 54: {fileID: 689512558}
-  - 136: {fileID: 689512559}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -12346,36 +12216,6 @@ Transform:
   - {fileID: 1053141241}
   - {fileID: 1196830141}
   m_Father: {fileID: 0}
---- !u!54 &689512558
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 662739137}
-  m_GameObject: {fileID: 689512556}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &689512559
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 662739137}
-  m_GameObject: {fileID: 689512556}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &689512560
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13518,8 +13358,6 @@ GameObject:
   - 95: {fileID: 749640706}
   - 114: {fileID: 749640705}
   - 195: {fileID: 749640704}
-  - 54: {fileID: 749640702}
-  - 136: {fileID: 749640703}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -13540,36 +13378,6 @@ Transform:
   - {fileID: 978852816}
   - {fileID: 987831828}
   m_Father: {fileID: 0}
---- !u!54 &749640702
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 172101279}
-  m_GameObject: {fileID: 749640700}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &749640703
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 172101279}
-  m_GameObject: {fileID: 749640700}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &749640704
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13626,8 +13434,6 @@ GameObject:
   - 95: {fileID: 753551248}
   - 114: {fileID: 753551247}
   - 195: {fileID: 753551246}
-  - 54: {fileID: 753551244}
-  - 136: {fileID: 753551245}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -13648,36 +13454,6 @@ Transform:
   - {fileID: 2012150779}
   - {fileID: 197859289}
   m_Father: {fileID: 0}
---- !u!54 &753551244
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1341792473}
-  m_GameObject: {fileID: 753551242}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &753551245
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1341792473}
-  m_GameObject: {fileID: 753551242}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &753551246
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15043,8 +14819,6 @@ GameObject:
   - 95: {fileID: 850277153}
   - 114: {fileID: 850277152}
   - 195: {fileID: 850277151}
-  - 54: {fileID: 850277149}
-  - 136: {fileID: 850277150}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -15065,36 +14839,6 @@ Transform:
   - {fileID: 1911641290}
   - {fileID: 353257475}
   m_Father: {fileID: 0}
---- !u!54 &850277149
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 229707890}
-  m_GameObject: {fileID: 850277147}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &850277150
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 229707890}
-  m_GameObject: {fileID: 850277147}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &850277151
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15904,8 +15648,6 @@ GameObject:
   - 95: {fileID: 893346186}
   - 114: {fileID: 893346185}
   - 195: {fileID: 893346184}
-  - 54: {fileID: 893346182}
-  - 136: {fileID: 893346183}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -15926,36 +15668,6 @@ Transform:
   - {fileID: 1841728497}
   - {fileID: 840960325}
   m_Father: {fileID: 0}
---- !u!54 &893346182
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1318395100}
-  m_GameObject: {fileID: 893346180}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &893346183
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1318395100}
-  m_GameObject: {fileID: 893346180}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &893346184
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16905,8 +16617,6 @@ GameObject:
   - 95: {fileID: 956139247}
   - 114: {fileID: 956139246}
   - 195: {fileID: 956139245}
-  - 54: {fileID: 956139243}
-  - 136: {fileID: 956139244}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -16927,36 +16637,6 @@ Transform:
   - {fileID: 1007212064}
   - {fileID: 1881633260}
   m_Father: {fileID: 0}
---- !u!54 &956139243
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 706393206}
-  m_GameObject: {fileID: 956139241}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &956139244
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 706393206}
-  m_GameObject: {fileID: 956139241}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &956139245
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -17232,8 +16912,6 @@ GameObject:
   - 95: {fileID: 966407356}
   - 114: {fileID: 966407355}
   - 195: {fileID: 966407354}
-  - 54: {fileID: 966407352}
-  - 136: {fileID: 966407353}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -17254,36 +16932,6 @@ Transform:
   - {fileID: 278123894}
   - {fileID: 1095847373}
   m_Father: {fileID: 0}
---- !u!54 &966407352
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1964529165}
-  m_GameObject: {fileID: 966407350}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &966407353
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1964529165}
-  m_GameObject: {fileID: 966407350}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &966407354
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -19160,8 +18808,6 @@ GameObject:
   - 95: {fileID: 1056636745}
   - 114: {fileID: 1056636744}
   - 195: {fileID: 1056636743}
-  - 54: {fileID: 1056636741}
-  - 136: {fileID: 1056636742}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -19182,36 +18828,6 @@ Transform:
   - {fileID: 36974223}
   - {fileID: 199064908}
   m_Father: {fileID: 0}
---- !u!54 &1056636741
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 969807829}
-  m_GameObject: {fileID: 1056636739}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &1056636742
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 969807829}
-  m_GameObject: {fileID: 1056636739}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1056636743
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -23937,8 +23553,6 @@ GameObject:
   - 95: {fileID: 1339460557}
   - 114: {fileID: 1339460556}
   - 195: {fileID: 1339460555}
-  - 54: {fileID: 1339460553}
-  - 136: {fileID: 1339460554}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -23959,36 +23573,6 @@ Transform:
   - {fileID: 1692047246}
   - {fileID: 222400641}
   m_Father: {fileID: 0}
---- !u!54 &1339460553
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 544134181}
-  m_GameObject: {fileID: 1339460551}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &1339460554
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 544134181}
-  m_GameObject: {fileID: 1339460551}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1339460555
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -24575,8 +24159,6 @@ GameObject:
   - 95: {fileID: 1377007917}
   - 114: {fileID: 1377007916}
   - 195: {fileID: 1377007915}
-  - 54: {fileID: 1377007913}
-  - 136: {fileID: 1377007914}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -24597,36 +24179,6 @@ Transform:
   - {fileID: 1742691191}
   - {fileID: 1711533602}
   m_Father: {fileID: 0}
---- !u!54 &1377007913
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1136043216}
-  m_GameObject: {fileID: 1377007911}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &1377007914
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1136043216}
-  m_GameObject: {fileID: 1377007911}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1377007915
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -25414,8 +24966,6 @@ GameObject:
   - 95: {fileID: 1403648140}
   - 114: {fileID: 1403648139}
   - 195: {fileID: 1403648138}
-  - 54: {fileID: 1403648136}
-  - 136: {fileID: 1403648137}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -25436,36 +24986,6 @@ Transform:
   - {fileID: 2037918174}
   - {fileID: 132886594}
   m_Father: {fileID: 0}
---- !u!54 &1403648136
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1397627902}
-  m_GameObject: {fileID: 1403648134}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &1403648137
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1397627902}
-  m_GameObject: {fileID: 1403648134}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1403648138
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -25975,8 +25495,6 @@ GameObject:
   - 95: {fileID: 1451462149}
   - 114: {fileID: 1451462148}
   - 195: {fileID: 1451462147}
-  - 54: {fileID: 1451462145}
-  - 136: {fileID: 1451462146}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -25997,36 +25515,6 @@ Transform:
   - {fileID: 1921841551}
   - {fileID: 903037214}
   m_Father: {fileID: 0}
---- !u!54 &1451462145
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1920443214}
-  m_GameObject: {fileID: 1451462143}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &1451462146
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1920443214}
-  m_GameObject: {fileID: 1451462143}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1451462147
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -27195,8 +26683,6 @@ GameObject:
   - 95: {fileID: 1527013232}
   - 114: {fileID: 1527013231}
   - 195: {fileID: 1527013230}
-  - 54: {fileID: 1527013228}
-  - 136: {fileID: 1527013229}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -27217,36 +26703,6 @@ Transform:
   - {fileID: 1204623520}
   - {fileID: 67746267}
   m_Father: {fileID: 0}
---- !u!54 &1527013228
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 665588957}
-  m_GameObject: {fileID: 1527013226}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &1527013229
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 665588957}
-  m_GameObject: {fileID: 1527013226}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1527013230
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -29320,8 +28776,6 @@ GameObject:
   - 95: {fileID: 1654591688}
   - 114: {fileID: 1654591687}
   - 195: {fileID: 1654591686}
-  - 54: {fileID: 1654591684}
-  - 136: {fileID: 1654591685}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -29342,36 +28796,6 @@ Transform:
   - {fileID: 1056336499}
   - {fileID: 2107558113}
   m_Father: {fileID: 0}
---- !u!54 &1654591684
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1395780504}
-  m_GameObject: {fileID: 1654591682}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &1654591685
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1395780504}
-  m_GameObject: {fileID: 1654591682}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1654591686
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -30979,8 +30403,6 @@ GameObject:
   - 95: {fileID: 1742615747}
   - 114: {fileID: 1742615746}
   - 195: {fileID: 1742615745}
-  - 54: {fileID: 1742615743}
-  - 136: {fileID: 1742615744}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -31001,36 +30423,6 @@ Transform:
   - {fileID: 255614243}
   - {fileID: 194849311}
   m_Father: {fileID: 0}
---- !u!54 &1742615743
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1789159517}
-  m_GameObject: {fileID: 1742615741}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &1742615744
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1789159517}
-  m_GameObject: {fileID: 1742615741}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1742615745
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -31438,8 +30830,6 @@ GameObject:
   - 95: {fileID: 1761233015}
   - 114: {fileID: 1761233014}
   - 195: {fileID: 1761233013}
-  - 54: {fileID: 1761233011}
-  - 136: {fileID: 1761233012}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -31460,36 +30850,6 @@ Transform:
   - {fileID: 440454932}
   - {fileID: 1097443660}
   m_Father: {fileID: 0}
---- !u!54 &1761233011
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 2128380591}
-  m_GameObject: {fileID: 1761233009}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &1761233012
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 2128380591}
-  m_GameObject: {fileID: 1761233009}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1761233013
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -32786,8 +32146,6 @@ GameObject:
   - 95: {fileID: 1832469098}
   - 114: {fileID: 1832469097}
   - 195: {fileID: 1832469096}
-  - 54: {fileID: 1832469094}
-  - 136: {fileID: 1832469095}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -32808,36 +32166,6 @@ Transform:
   - {fileID: 1379597498}
   - {fileID: 210714942}
   m_Father: {fileID: 0}
---- !u!54 &1832469094
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1825399052}
-  m_GameObject: {fileID: 1832469092}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &1832469095
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1825399052}
-  m_GameObject: {fileID: 1832469092}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1832469096
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -35658,8 +34986,6 @@ GameObject:
   - 95: {fileID: 1994066798}
   - 114: {fileID: 1994066797}
   - 195: {fileID: 1994066796}
-  - 54: {fileID: 1994066794}
-  - 136: {fileID: 1994066795}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -35680,36 +35006,6 @@ Transform:
   - {fileID: 1082453689}
   - {fileID: 491767185}
   m_Father: {fileID: 0}
---- !u!54 &1994066794
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 477621366}
-  m_GameObject: {fileID: 1994066792}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &1994066795
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 477621366}
-  m_GameObject: {fileID: 1994066792}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &1994066796
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -35951,8 +35247,6 @@ GameObject:
   - 95: {fileID: 2001844988}
   - 114: {fileID: 2001844987}
   - 195: {fileID: 2001844986}
-  - 54: {fileID: 2001844984}
-  - 136: {fileID: 2001844985}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -35973,36 +35267,6 @@ Transform:
   - {fileID: 865285600}
   - {fileID: 1051435176}
   m_Father: {fileID: 0}
---- !u!54 &2001844984
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1235038914}
-  m_GameObject: {fileID: 2001844982}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &2001844985
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1235038914}
-  m_GameObject: {fileID: 2001844982}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &2001844986
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -38194,8 +37458,6 @@ GameObject:
   - 95: {fileID: 2143309566}
   - 114: {fileID: 2143309565}
   - 195: {fileID: 2143309564}
-  - 54: {fileID: 2143309562}
-  - 136: {fileID: 2143309563}
   m_Layer: 9
   m_Name: Robot (Evacuation)
   m_TagString: Untagged
@@ -38216,36 +37478,6 @@ Transform:
   - {fileID: 186505282}
   - {fileID: 1333394377}
   m_Father: {fileID: 0}
---- !u!54 &2143309562
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1328069316}
-  m_GameObject: {fileID: 2143309560}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &2143309563
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 59d6d342d65f844d6a71664fe8cdd9b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1328069316}
-  m_GameObject: {fileID: 2143309560}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.79999995
-  m_Direction: 1
-  m_Center: {x: 0, y: .899999976, z: 0}
 --- !u!195 &2143309564
 NavMeshAgent:
   m_ObjectHideFlags: 0

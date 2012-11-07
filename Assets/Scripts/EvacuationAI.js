@@ -16,6 +16,14 @@ function Start() {
 
 	var goal = GameObject.FindWithTag("Goal");
 	agent.SetDestination(goal.transform.position);
+
+	// Wait for the first time of path planning.
+	while (agent.remainingDistance == 0.0) yield;
+
+	// Wait for the goal.
+	while (agent.remainingDistance > 0.5) yield;
+
+	Destroy(gameObject);
 }
 
 function Update() {
@@ -25,8 +33,4 @@ function Update() {
 		var rotation = Quaternion.LookRotation(agent.velocity);
 		transform.rotation = ExpEase.Out(transform.rotation, rotation, -4.0);
 	}
-}
-
-function OnTriggerEnter(other : Collider) {
-	Destroy(gameObject);
 }
